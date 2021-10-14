@@ -20,14 +20,29 @@ body {
   font-family: 'Space Mono', monospace;
   line-height: 1.4;
   font-weight: 400;
-
+  min-height: 100vh;
   padding: 4rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  //900px
+  @media (max-width: 56.25em) {
+    padding: 2rem;
+  }
 }
 
 .title {
   font-family: 'Inconsolata', monospace;
   font-size: 2.4rem;
+
   margin-bottom: 8rem;
+
+  @media (max-width: 45em) {
+    //720px
+    margin-bottom: 4rem;
+  }
 }
 
 .main {
@@ -41,6 +56,11 @@ body {
   & > * {
     flex: 1;
     padding: 5rem;
+
+    // @media (max-width: 45em) {
+    //   //720px
+    //   padding: 2rem;
+    // }
 
     @media (max-width: 25em) {
       padding: 0;
@@ -60,26 +80,28 @@ body {
   h2 {
     font-family: inherit;
     font-weight: 700;
-    font-size: 4rem;
+    // font-size: 4rem;
+    font-size: 6rem;
+
+    //1200px
+    @media (max-width: 75em) {
+      font-size: 4rem;
+    }
 
     margin-bottom: 2rem;
-
-    @media (max-width: 45em) {
-      //720px
-      font-size: 3rem;
-    }
   }
 
   p {
     font-family: inherit;
-    font-size: 2rem;
+    // font-size: 2rem;
+    font-size: 2.4rem;
     line-height: 1.4;
     color: #4f4f4f;
     margin-bottom: 4rem;
 
-    @media (max-width: 45em) {
-      //720px
-      font-size: 1.6rem;
+    //1200px
+    @media (max-width: 75em) {
+      font-size: 2rem;
     }
   }
 
@@ -100,5 +122,17 @@ body {
       //720px
       padding: 1rem 2em;
     }
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+  p {
+    font-size: 1.4rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: #bdbdbd;
   }
 }
